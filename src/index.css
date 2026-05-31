@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+@import "tailwindcss";
+
+* {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+}
+
+@theme {
+  --color-primary: #5044e5;
+}
+
+/* Override Tailwind v4 media query dark mode with class-based dark mode */
+html.dark .dark\:bg-slate-950 {
+  background-color: var(--color-slate-950) !important;
+}
+
+html.dark .dark\:from-gray-800 {
+  --tw-gradient-from: var(--color-gray-800) !important;
+  --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-from), var(--color-slate-950)) !important;
+}
+
+html.dark .dark\:via-gray-700 {
+  --tw-gradient-via-stops: var(--tw-gradient-via-stops, var(--tw-gradient-from), var(--color-gray-700), var(--color-slate-950)) !important;
+}
+
+html.dark .dark\:to-black {
+  --tw-gradient-to: var(--color-black) !important;
+  --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-from), var(--color-gray-700), var(--color-black)) !important;
+}
+
+html.dark .dark\:invert-0 {
+  filter: invert(0) !important;
+}
